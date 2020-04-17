@@ -1,0 +1,72 @@
+<h1>Data From Api Call</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Alpha Code</th>
+    <th>Capital</th>
+      <th>Region</th>
+      <th>Population</th>
+        <th>Sub Region</th>
+              
+
+
+    
+  </tr>
+  <tr *ngFor="let country of countriesArray " >
+    <td>{{country.name}}</td>
+    <td>{{country.alpha2Code}}</td>
+    <td>{{country.capital}}</td>
+    <td>{{country.region}}</td>
+    <td>{{country.population}}</td>
+    <td>{{country.subregion}}</td>
+   
+  </tr>
+  
+</table>
+
+
+
+
+<div style="text-align:center">
+
+<button class="button" (click)="saveAll()" >Save</button>
+<button style="margin-left:10px" class="button" (click)="getAll()" >Get</button>
+<button style="margin-left:10px" class="button" (click)="deleteAll()" >Delete</button>
+</div>
+
+
+
+<h3 *ngIf="flag" >Data From DB</h3>
+
+<table *ngIf="flag" >
+  <tr>
+     <th>Id</th>
+     <th>Name</th>
+    <th>Alpha Code</th>
+    <th>Capital</th>
+      <th>Region</th>
+      <th>Population</th>
+        <th>Sub Region</th>
+              
+
+
+    
+  </tr>
+  <tr *ngFor="let country of dataFromDb " >
+    <td>{{country.id}}</td>
+    <td>{{country.name}}</td>
+    <td>{{country.alphaCode}}</td>
+    <td>{{country.capital}}</td>
+    <td>{{country.region}}</td>
+    <td>{{country.population}}</td>
+    <td>{{country.subregion}}</td>
+   
+  </tr>
+  
+</table>
+
+
+
+
+
+
